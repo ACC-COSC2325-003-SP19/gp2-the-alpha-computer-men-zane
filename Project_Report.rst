@@ -28,7 +28,7 @@ Project Report
                   
                   Clock Speed				16 MHz
 
-                  Power:        Powered over USB port regulated to 5V or a 2.1mm center-positive plug coming from an AC-DC wall plug converter. Power may also be issued to the board via the power pins, connecting the leads of the power source to the GND and VIN pins, assuming the supply is within the recommended 7V - 12V range.
+                  Power:        Powered over USB port regulated to 5V or powered over a 2.1mm center-positive plug coming from an AC-DC wall plug converter. Power may also be issued to the board via the power pins, connecting the leads of the power source to the GND and VIN pins, assuming the supply is within the recommended 7V - 12V range.
 	
 	
 	* Controlling the device - 

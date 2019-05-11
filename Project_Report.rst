@@ -10,23 +10,23 @@ Project Report
                   https://www.arduino.cc/en/Main/ArduinoBoardUnoSMD
 		* Basic Features - Arduino Uno SMD
                   
-                  Microcontroller			ATmega328
+                  Microcontroller:			ATmega328
                   
-		  Operating Voltage			5V
+		  Operating Voltage:			5V
                   
-		  Input Voltage recommended power	7V-12V (Limit: 6V-20V)
+		  Input Voltage recommended power:	7V-12V (Limit: 6V-20V)
                   
-                  Digital I/O Pins			14 pins (6 pins with PWM output)
+                  Digital I/O Pins:			14 pins (6 pins with PWM output)
                   
-                  Analog Input Pins			6 pins
+                  Analog Input Pins:			6 pins
                  
-                  Flash Memory				32 KB - 0.5 KB used by bootloader
+                  Flash Memory:				32 KB - 0.5 KB used by bootloader
                   
-                  SRAM					2 KB
+                  SRAM:					2 KB
                   
-                  EEPROM				1 KB
+                  EEPROM:				1 KB
                   
-                  Clock Speed				16 MHz
+                  Clock Speed:				16 MHz
 
                   Power:        Powered over USB port regulated to 5V or powered over a 2.1mm center-positive plug coming from an AC-DC wall plug converter. Power may also be issued to the board via the power pins, connecting the leads of the power source to the GND and VIN pins, assuming the supply is within the recommended 7V - 12V range.
 	

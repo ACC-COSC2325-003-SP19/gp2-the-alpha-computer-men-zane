@@ -1,0 +1,64 @@
+
+blink.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__ctors_end>:
+   0:	11 24       	eor	r1, r1
+   2:	1f be       	out	0x3f, r1	; 63
+   4:	cf ef       	ldi	r28, 0xFF	; 255
+   6:	d8 e0       	ldi	r29, 0x08	; 8
+   8:	de bf       	out	0x3e, r29	; 62
+   a:	cd bf       	out	0x3d, r28	; 61
+   c:	80 e8       	ldi	r24, 0x80	; 128
+   e:	80 93 61 00 	sts	0x0061, r24	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+  12:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+  16:	2d 98       	cbi	0x05, 5	; 5
+  18:	1b d0       	rcall	.+54     	; 0x50 <toggle>
+  1a:	1f d0       	rcall	.+62     	; 0x5a <delay>
+  1c:	19 d0       	rcall	.+50     	; 0x50 <toggle>
+  1e:	1d d0       	rcall	.+58     	; 0x5a <delay>
+  20:	17 d0       	rcall	.+46     	; 0x50 <toggle>
+  22:	1b d0       	rcall	.+54     	; 0x5a <delay>
+  24:	15 d0       	rcall	.+42     	; 0x50 <toggle>
+  26:	19 d0       	rcall	.+50     	; 0x5a <delay>
+  28:	13 d0       	rcall	.+38     	; 0x50 <toggle>
+  2a:	17 d0       	rcall	.+46     	; 0x5a <delay>
+  2c:	11 d0       	rcall	.+34     	; 0x50 <toggle>
+  2e:	15 d0       	rcall	.+42     	; 0x5a <delay>
+  30:	0f d0       	rcall	.+30     	; 0x50 <toggle>
+  32:	13 d0       	rcall	.+38     	; 0x5a <delay>
+  34:	12 d0       	rcall	.+36     	; 0x5a <delay>
+  36:	0c d0       	rcall	.+24     	; 0x50 <toggle>
+  38:	10 d0       	rcall	.+32     	; 0x5a <delay>
+  3a:	0a d0       	rcall	.+20     	; 0x50 <toggle>
+  3c:	0e d0       	rcall	.+28     	; 0x5a <delay>
+  3e:	0d d0       	rcall	.+26     	; 0x5a <delay>
+  40:	07 d0       	rcall	.+14     	; 0x50 <toggle>
+  42:	0b d0       	rcall	.+22     	; 0x5a <delay>
+  44:	05 d0       	rcall	.+10     	; 0x50 <toggle>
+  46:	09 d0       	rcall	.+18     	; 0x5a <delay>
+  48:	08 d0       	rcall	.+16     	; 0x5a <delay>
+  4a:	02 d0       	rcall	.+4      	; 0x50 <toggle>
+  4c:	06 d0       	rcall	.+12     	; 0x5a <delay>
+  4e:	e4 cf       	rjmp	.-56     	; 0x18 <__ctors_end+0x18>
+
+00000050 <toggle>:
+  50:	85 b1       	in	r24, 0x05	; 5
+  52:	90 e2       	ldi	r25, 0x20	; 32
+  54:	89 27       	eor	r24, r25
+  56:	85 b9       	out	0x05, r24	; 5
+  58:	08 95       	ret
+
+0000005a <delay>:
+  5a:	ac e2       	ldi	r26, 0x2C	; 44
+  5c:	bf ef       	ldi	r27, 0xFF	; 255
+  5e:	cf ef       	ldi	r28, 0xFF	; 255
+  60:	ca 95       	dec	r28
+  62:	f1 f7       	brne	.-4      	; 0x60 <delay+0x6>
+  64:	ba 95       	dec	r27
+  66:	d9 f7       	brne	.-10     	; 0x5e <delay+0x4>
+  68:	aa 95       	dec	r26
+  6a:	c1 f7       	brne	.-16     	; 0x5c <delay+0x2>
+  6c:	08 95       	ret

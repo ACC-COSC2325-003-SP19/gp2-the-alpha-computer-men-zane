@@ -11,9 +11,7 @@ Project Report
 		* Basic Features
                   
                   Microcontroller	ATmega328
-
                   Operating Voltage	5V
-                  
                   Input Voltage (recommended)	7-12V
                   
                   Input Voltage (limits)	6-20V

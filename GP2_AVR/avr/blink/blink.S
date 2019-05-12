@@ -1,6 +1,7 @@
-; Hello Blinky World for AVR
+; S.O.S. Blinky Code for AVR
 ; Author: Roie R. Black
 ; Date: July 14, 2015
+; Modified by: gp2-the-alpha-computer-men-zane
 
 #include "config.h"
 
@@ -32,7 +33,7 @@ main:
         cbi         LED_PORT, LED_PIN       ; start with the LED off
        
 
-        ; enter the blink loop
+        ; enter the S.O.S. blink loop
 1:      rcall       toggle
         rcall       delay
         rcall       toggle

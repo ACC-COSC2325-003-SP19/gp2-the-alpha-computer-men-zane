@@ -6,7 +6,7 @@ Project Report
 **************
 
 	* Chosen Device Description - David Nguyen
-		* Source
+		* Source:
                   https://www.arduino.cc/en/Main/ArduinoBoardUnoSMD
 		* Basic Features - Arduino Uno SMD
 

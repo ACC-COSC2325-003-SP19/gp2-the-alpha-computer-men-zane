@@ -17,6 +17,93 @@ Project Report
                   s
 	* Device demonstration - 
 		* The code we use uses pin 13 of the arduino board and the ground next to the voltage pin. We use the wires we have to 			  line up two rows (or columns) of the component board. In the same rows we align our light and buzzer parallel. The 			  code we installed onto the arduino uses toggle and delay to give signal to make our LED to light. We also use dec and 		  brne 
-	* Project Code - 
-		* Any code your team authored. SOurces for other parts are fine
-                  s
+	* Project Code - Charlie Kliewer
+		*Here is our code for the S.O.S. signal:
+.. code-block:: c
+	; S.O.S. Blinky Code for AVR
+	; Author: Roie R. Black
+	; Date: July 14, 2015
+	; Modified by: gp2-the-alpha-computer-men-zane
+	
+	#include "config.h"
+	
+		.section .data
+	dummy: 	.byte 0		; dummy global variable
+	
+	        .section .text
+	        .global     main
+	        .extern     delay          
+	        .org        0x0000
+	
+	main:
+		; clear the SREG register
+	        eor     r1, r1                  ; cheap zero
+	        out     _(SREG), r1                ; clear flag register
+	
+	
+	        ; set up the stack
+	        ldi         r28, (RAMEND & 0x00ff)
+	        ldi         r29, (RAMEND >> 8)
+	        out         _(SPH), r29
+	        out         _(SPL), r28
+	
+		; initialize the CPU clock to run at full speed
+		ldi         r24, 0x80
+	        sts         CLKPR, r24              ; allow access to clock setup
+	        sts         CLKPR, r1               ; run at full speed
+	        
+	        cbi         LED_PORT, LED_PIN       ; start with the LED off
+	       
+	
+	        ; enter the S.O.S. blink loop
+	1:      rcall       toggle
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+		rcall       toggle
+	        rcall       delay
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rcall       delay
+	        rcall       toggle
+	        rcall       delay
+	        rjmp        1b
+	
+	toggle:
+	        in          r24, LED_PORT           ; get current bits
+	        ldi         r25, (1 << LED_PIN)     ; LED is pin 5
+	        eor         r24, r25                ; flip the bit
+	        out         LED_PORT, r24           ; write the bits back
+	        ret
+	    .global      delay
+	    .section    .text
+	delay:
+	        ldi      r26, 44
+	1:
+		ldi	 r27, 255
+	2:
+		ldi	 r28, 255
+	3:
+		dec      r28
+	        brne     3b
+		dec      r27
+	        brne     2b
+		dec      r26
+	        brne     1b
+		ret

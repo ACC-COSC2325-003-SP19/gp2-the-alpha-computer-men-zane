@@ -35,8 +35,7 @@ Project Report
 		* Required input/output signals
                   s
 	* Device demonstration - 
-		* How will you show off this device
-                  s
+		* The code we use uses pin 13 of the arduino board and the ground next to the voltage pin. We use the wires we have to 			  line up two rows (or columns) of the component board. In the same rows we align our light and buzzer parallel. The 			  code we installed onto the arduino uses toggle and delay to give signal to make our LED to light. We also use dec and 		  brne 
 	* Project Code - 
 		* Any code your team authored. SOurces for other parts are fine
                   s

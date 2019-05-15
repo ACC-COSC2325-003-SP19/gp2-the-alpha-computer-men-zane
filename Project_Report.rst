@@ -113,3 +113,26 @@ Project Report
 		dec      r26
 	        brne     1b
 		ret
+.. code-block:: c
+	const int buzzer = 9;
+
+	void setup() {
+	  // put your setup code here, to run once:
+	  pinMode(buzzer, OUTPUT);
+	}
+
+	void loop() {
+	  // put your main code here, to run repeatedly:
+	  tone(buzzer, 40, 500);
+	  delay(1000);
+	  tone(buzzer, 40, 500);
+	  delay(1000);
+	  tone(buzzer, 40, 500);
+	  delay(1000);
+	  tone(buzzer, 90, 1000);
+	  delay(1500);
+	  tone(buzzer, 90, 1000);
+	  delay(1500);
+	  tone(buzzer, 90, 1000);
+	  delay(1500);
+	}

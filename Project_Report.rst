@@ -113,6 +113,9 @@ Project Report
 		dec      r26
 	        brne     1b
 		ret
+		
+Arduino IDE
+***********
 .. code-block:: c
 
 	const int buzzer = 9;

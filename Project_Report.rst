@@ -15,13 +15,12 @@ Project Report
 		* Required input/output signals
                   s
 	* Device demonstration - Keven Meadows
-		* The code we use uses pin 13 of the arduino board and the ground next to the voltage pin. We use the wires we have to 			   line up two rows (or columns) of the component board. In the same rows we align our light and buzzer parallel. The 			   code we installed onto the arduino uses toggle and delay to give signal to make our LED to light. We also use dec and 		    brne to to give ldi its register values.
+		* The code we use uses pin 13 of the arduino board and the ground next to the voltage pin. We use the wires we have to 			   line up two rows (or columns) of the component board. In the same rows we align our light parallel. The 			   code we installed onto the arduino uses toggle and delay to give signal to make our LED  light. We also use dec and 		    brne to to give ldi its register values.
 		•	First wire up board (plug into pin and ground)
 		•	Place LED on the board
-		•	Place buzzer on the board
 		•	Plug in pin wire to the board
 		•	Plug in ground wire to the board
-		•	Reset to show off both the LED and buzzer
+		•	Reset to show off the LED
 
 
 	* Project Code - Charlie Kliewer

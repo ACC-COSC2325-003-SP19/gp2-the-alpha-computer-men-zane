@@ -61,6 +61,25 @@ main:
         rcall       delay
         rcall       toggle
         rcall       delay
+        rcall       toggle
+        rcall       delay
+        rcall       toggle
+        rcall       delay
+        rcall       toggle
+        rcall       delay
+        rcall       toggle
+        rcall       delay
+        rcall       toggle
+        rcall       delay
+        rcall       toggle
+        rcall       delay
+        rcall       delay
+        rcall       delay
+        rcall       delay
+        rcall       delay
+        rcall       delay
+        rcall       delay
+
         rjmp        1b
 
 toggle:

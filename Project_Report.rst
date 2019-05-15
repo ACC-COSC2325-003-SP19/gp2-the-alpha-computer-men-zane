@@ -114,6 +114,7 @@ Project Report
 	        brne     1b
 		ret
 .. code-block:: c
+
 	const int buzzer = 9;
 
 	void setup() {

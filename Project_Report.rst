@@ -127,16 +127,22 @@ Arduino IDE
 
 	void loop() {
 	  // put your main code here, to run repeatedly:
-	  tone(buzzer, 40, 500);
-	  delay(1000);
-	  tone(buzzer, 40, 500);
-	  delay(1000);
-	  tone(buzzer, 40, 500);
-	  delay(1000);
-	  tone(buzzer, 90, 1000);
-	  delay(1500);
-	  tone(buzzer, 90, 1000);
-	  delay(1500);
-	  tone(buzzer, 90, 1000);
-	  delay(1500);
+	  tone(buzzer, 500, 75);
+	  delay(120);
+	  tone(buzzer, 500, 75);
+	  delay(120);
+	  tone(buzzer, 500, 75);
+	  delay(240);
+	  tone(buzzer, 500, 125);
+	  delay(175);
+	  tone(buzzer, 500, 125);
+	  delay(175);
+	  tone(buzzer, 500, 125);
+	  delay(240);
+	  tone(buzzer, 500, 75);
+	  delay(120);
+	  tone(buzzer, 500, 75);
+	  delay(120);
+	  tone(buzzer, 500, 75);
+	  delay(700);
 	}

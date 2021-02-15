@@ -7,4 +7,4 @@ Group Project 2
 :Course: COSC2325-003
 :Instructor: Roie R Black
 :Started on: April 24, 2019
-:Submitted on: 
+:Submitted on: May 15, 2019
